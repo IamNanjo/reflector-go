@@ -1,6 +1,6 @@
 # reflector-go
 
-Mirrorlist updater inspired by [reflector](https://xyne.dev/projects/reflector/).
+Arch Linux mirrorlist updater inspired by [reflector](https://xyne.dev/projects/reflector/).
 Only uses mirrors with 100% completion and sorts them by score.
 
 This is mainly meant for personal use as I find reflector to be unnecessarily slow.
