@@ -71,9 +71,9 @@ func filterResults(results []Url, protocol string, country string, number int) [
 	filteredLen := len(filtered)
 	limit := min(filteredLen, number)
 
-	filtered = filtered[:limit]
+	sort.SliceStable(filtered, func(i, j int) bool { return filtered[i].Score < filtered[j].Score })
 
-	sort.SliceStable(filtered, func(i, j int) bool { return filtered[i].Score > filtered[j].Score })
+	filtered = filtered[:limit]
 
 	return filtered
 }
